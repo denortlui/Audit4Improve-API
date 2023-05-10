@@ -3,6 +3,7 @@
  */
 package us.muit.fs.a4i.persistence;
 
+import java.awt.Color;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -246,7 +247,13 @@ public class ExcelReportManager implements PersistenceManager, FileManager {
 		CellStyle style = wb.createCellStyle();
 
 		try {
-			style.setFont((Font) formater.getIndicatorFont(indicator.getIndicator().getState()));
+			//Obtengo los datos de la fuente a utilizar
+			Font fuente = (Font) formater.getIndicatorFont(indicator.getIndicator().getState());
+			Color color = Color.decode(fuente.getColor());
+			
+			//Establezco el color y la fuente a utilizar en los indicadores.
+			style.setFont(fuente.getFont());
+			style.setFillBackgroundColor(color);
 		} catch (IOException e) {
 			log.warning("Problema al abrir el fichero con los formatos");
 			e.printStackTrace();

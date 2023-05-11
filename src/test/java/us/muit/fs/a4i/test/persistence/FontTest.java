@@ -3,9 +3,10 @@ package us.muit.fs.a4i.test.persistence;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.awt.Color;
-import java.awt.Font;
+//import java.awt.Font;
 import java.util.logging.Logger;
 
+import us.muit.fs.a4i.model.entities.Font;
 
 /**
  * Test de la clase Font
@@ -53,7 +54,7 @@ class FontTest {
 		underTest = new Font();
 		
 		//Compruebo que se devuelve el mismo tipo
-		assertEquals(underTest.getFont(), underTest, "El objeto devuelto debe ser la misma fuente")
+		assertEquals(underTest.getFont().getClass(), java.awt.Font.class, "El objeto devuelto debe ser la misma fuente")
 	}
 	
 	@Test
@@ -64,7 +65,7 @@ class FontTest {
 		assertNotNull(underTest.getSize(), "Debe tener un valor por defecto");
 		
 		//Compruebo que sea del tipo int
-		assertThat(underTest.getSize(), is(instanceOf(Integer.class))), "Deberia ser del tipo Integer.");
+		assertEquals(underTest.getSize().getClass(), Integer.class, "Deberia ser del tipo Integer.");
 	}
 	
 	@Test
@@ -75,6 +76,6 @@ class FontTest {
 		assertNotNull(underTest.getName(), "Debe tener un valor por defecto");
 		
 		//Compruebo que sea del tipo int
-		assertThat(underTest.getName(), is(instanceOf(String.class))), "Deberia ser del tipo Integer.");
+		assertEquals(underTest.getName().getClass(), String.class, "Deberia ser del tipo Integer.");
 	}
 }

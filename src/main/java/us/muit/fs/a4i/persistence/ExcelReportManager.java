@@ -17,13 +17,16 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
+//import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import us.muit.fs.a4i.control.ReportManager;
+import us.muit.fs.a4i.control.ReportManagerI;
 import us.muit.fs.a4i.exceptions.ReportNotDefinedException;
 import us.muit.fs.a4i.model.entities.ReportI;
 import us.muit.fs.a4i.model.entities.ReportItemI;
+import us.muit.fs.a4i.model.entities.Font;
 
 /**
  * <p>
@@ -259,6 +262,7 @@ public class ExcelReportManager implements PersistenceManager, FileManager {
 			e.printStackTrace();
 		}
 
+			
 		row.createCell(cellIndex++).setCellValue(indicator.getName());
 		row.createCell(cellIndex++).setCellValue(indicator.getValue().toString());
 		row.createCell(cellIndex++).setCellValue(indicator.getUnit());

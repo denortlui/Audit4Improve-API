@@ -11,6 +11,7 @@ jobs:
       - name: Send mailer
         uses: dawidd6/action-send-mail@v3.7.2
         with:
+          connection_url: ${{secrets.URL_SMTP}}
           server_address: outlook.office365.com
           server_port: 995
           secure: true

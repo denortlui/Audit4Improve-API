@@ -11,7 +11,7 @@ jobs:
       - name: Send mailer
         uses: dawidd6/action-send-mail@v3.7.2
         with:
-          server_address: '	smtp.office365.com'
+          server_address: 'smtp.office365.com'
           server_port: 587
           username: 'denis31599@hotmail.com'
           password: ${{secrets.CREDS_CORREO_PWD}}

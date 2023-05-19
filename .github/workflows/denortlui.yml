@@ -1,8 +1,8 @@
 name: DENORTLUI
 on:
   workflow_dispatch:
-  project_card:
-    types: [created, moved]
+  issues:
+    types: [opened, edited]
 jobs:
   my_job:
     name: Actividad 12

@@ -11,12 +11,11 @@ jobs:
       - name: Send mailer
         uses: dawidd6/action-send-mail@v3.7.2
         with:
-          connection_url: ${{secrets.URL_SMTP}}
          # Required mail server address if not connection_url:
-          server_address: smtp.office365.com
+          server_address: smtp.gmail.com
           # Server port, default 25:
-          server_port: 587
-          username: denis31599@hotmail.com
+          server_port: 25
+          username: denis31599@gmail.com
           password: ${{secrets.CREDS_CORREO_PWD}}
           subject: 'Notificacion del proyecto FS'
           to: 'denorltui@us.es'

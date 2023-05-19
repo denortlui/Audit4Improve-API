@@ -20,6 +20,7 @@ jobs:
           to: 'denorltui@us.es'
           subject: 'Notificacion del proyecto FS'
           body: 'Se ha realizado una modificación en el proyecto <3'
-          
+      - name: Mensaje de fin
+        run: echo 'Correo enviado :)'
           
         

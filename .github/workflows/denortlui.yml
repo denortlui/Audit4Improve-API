@@ -19,7 +19,7 @@ jobs:
           username: denis31599@gmail.com
           password: ${{secrets.CREDS_CORREO_PWD}}
           subject: 'Notificacion del proyecto FS'
-          to: 'denorltui@us.es'
+          to: 'denortlui@us.es'
           from: 'Denis'
           body: 'Se ha realizado una modificación en el proyecto <3'
       - name: Mensaje de fin

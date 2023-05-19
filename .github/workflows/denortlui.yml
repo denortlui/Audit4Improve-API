@@ -11,13 +11,14 @@ jobs:
       - name: Send mailer
         uses: dawidd6/action-send-mail@v3.7.2
         with:
-          server_address: 'smtp.office365.com'
+          server_address: smtp.office365.com
           server_port: 587
-          username: 'denis31599@hotmail.com'
+          secure: true
+          username: denis31599@hotmail.com
           password: ${{secrets.CREDS_CORREO_PWD}}
           subject: 'Notificacion del proyecto FS'
           to: 'denorltui@us.es'
-          from: 'Denis<denis31599@hotmail.com>'
+          from: 'Denis'
           body: 'Se ha realizado una modificación en el proyecto <3'
       - name: Mensaje de fin
         run: echo 'Correo enviado :)'

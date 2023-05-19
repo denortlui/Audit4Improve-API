@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send mailer
-        uses: devellany/send-mail@v1.0.2
+        uses: betterfor/action-send-mail@v0.1.1
         with:
           host: 'smtp-mail.outlook.com'
-          port: '587'
+          port: 587
           account: 'denis31599@hotmail.com'
           password: ${{secrets.CREDS_CORREO_PWD}}
           sender: 'Denis'

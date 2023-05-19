@@ -11,15 +11,19 @@ jobs:
       - name: Send mailer
         uses: betterfor/action-send-mail@v0.1.1
         with:
-          host: 'smtp-mail.outlook.com'
-          port: 587
-          account: 'denis31599@hotmail.com'
+          server_address: 'smtp-mail.outlook.com'
+          server_port: 587
+          username: 'denis31599@hotmail.com'
           password: ${{secrets.CREDS_CORREO_PWD}}
-          sender: 'Denis'
-          from: 'denis31599@hotmail.com'
-          to: 'denorltui@us.es'
           subject: 'Notificacion del proyecto FS'
+          to: 'denorltui@us.es'
+          from: 'Denis<denis31599@hotmail.com>'
           body: 'Se ha realizado una modificación en el proyecto <3'
+          
+          
+          
+          
+          
       - name: Mensaje de fin
         run: echo 'Correo enviado :)'
           

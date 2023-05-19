@@ -2,8 +2,8 @@ name: DENORTLUI
 on:
   workflow_dispatch:
   project_card:
-    -created
-    -moved
+    - created
+    - moved
 jobs:
   my_job:
     name: Actividad 12
